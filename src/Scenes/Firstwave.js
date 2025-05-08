@@ -297,11 +297,16 @@ class Firstwave extends Phaser.Scene{
     for(let mf of my.sprite.mfire.getChildren()){
             if(mf.active){
                 mf.x-=5;
-            }
+            
             if(mf.x<=0){
                 mf.active=false;
                 mf.visible=false;
             }
+            if(this.collides(mf,my.sprite.player)){
+                
+
+            }
+        }
         
     }
     
