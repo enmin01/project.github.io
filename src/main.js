@@ -1,15 +1,15 @@
 // Jim Whitehead
-// Created: 4/25/2024
+// Created: 4/14/2024
 // Phaser: 3.70.0
 //
-// Bullet Time
+// BuildAMonster
 //
-// Multiple examples of how to implement bullet firing logic using Phaser
+// A template for building a monster using a series of assets from
+// a sprite atlas.
 // 
-// Art assets from Kenny Assets:
-// https://kenney.nl/assets/
+// Art assets from Kenny Assets "Monster Builder Pack" set:
+// https://kenney.nl/assets/monster-builder-pack
 
-// debug with extreme prejudice
 "use strict"
 
 // game config
@@ -19,11 +19,10 @@ let config = {
     render: {
         pixelArt: true  // prevent pixel art from getting blurred when scaled
     },
-    fps: { forceSetTimeOut: true, target: 60 },   // ensure consistent timing across machines
     width: 800,
     height: 600,
-    scene: [Firstwave,Startscene,SingleBullet, ArrayBullet, FixedArrayBullet, GroupBullet, ClassBullet, ArrayBoom]
+    scene: [Monster],
+    fps: { forceSetTimeOut: true, target: 30 }
 }
-
 
 const game = new Phaser.Game(config);
